@@ -29,28 +29,6 @@
 // //? tar 2
 
 
-// function getArrayWithSameValue(ar1,ar2)  {
-
-//     const ar3=[];
-
-//     for(let i=0; i<ar1.length;i++)
-//     {
-//         for(let j=0;j<ar2.length;j++) {
-
-//             if(ar1[i]==ar2[j] ) {
-//                 ar3.pop(ar2[j]);
-//             }
-                      
-//     }
-
-//     }
-//     console.log(ar3);
-//   }
- 
-// const ar1=[1,2,1,2,1];
-// const ar2=[2,2,2,1,3,1,2];
-// console.log(getArrayWithSameValue(ar1,ar2));
-
 function handleDuplicateValue(ar3,value) {
     let isFound=false;
     for(let i=0;i<ar3.length;i++) {
@@ -59,15 +37,14 @@ function handleDuplicateValue(ar3,value) {
         }   
     }
     return isFound;
-
 }
 
-function getCommonValue(ar1,ar2) {
+function getSameValuesBetweenTwoArrayes(ar1,ar2) {
    
     const commonValue=[];
 
     for(let i=0;i<ar1.length;i++) {
-        if(handleDuplicateValue(ar1,ar1[i])) {
+        if(handleDuplicateValue(commonValue,ar1[i])) {
             continue;
         }
         let found=false;
@@ -86,5 +63,11 @@ function getCommonValue(ar1,ar2) {
 
  const ar1=[1,2,1,2,1];
  const ar2=[2,2,2,1,3,1,2];
- console.log(getCommonValue(ar1,ar2));
+ console.log(getSameValuesBetweenTwoArrayes(ar1,ar2));
+
+ //********************************************************* */
+//? tar 3
+
+
+
 
